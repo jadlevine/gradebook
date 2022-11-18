@@ -30,7 +30,7 @@ A grade keeping app for teachers and administrators to manage their classes
 
 This application will allow you to add students, classes, and grades.
 
-You can find our development progress in our [Trello]().
+You can find our development progress in our [Trello](https://trello.com/b/1ZcAdoVy/gradebook).
 
 To use our app, go to our deployed site on [Heroku]().
 
