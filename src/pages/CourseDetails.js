@@ -1,35 +1,29 @@
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import StudentData from './components/StudentData'
+import Client from '../services/api'
+// import StudentData from '../components/StudentData'
 
 const CourseDetails = () => {
   let { course_id } = useParams
   const [courseDetails, setCourseDetails] = useState(null)
   const [courseStudents, setCourseStudents] = useState([])
 
-  const getCourseById = async () => {
-    try {
-      const response = await axios.get(`/courses/${course_id}`)
-      setCourseDetails(response.data)
-    } catch (err) {
-      console.log(err)
-    }
+  const getCourseDetails = async () => {
+    const response = await Client.get(`courses/${course_id}`)
+    setCourseDetails(response.data)
+    console.log('hello')
   }
 
-  const getStudentByCourseId = async () => {
-    const response = await axios.get()
-    setCourseStudents(response.data)
-  }
-
-  // JAL - just adding a BASE_URL here so line below doesn't cause problems when compiling
-  const BASE_URL = 'localhost:3001'
+  // const getStudentByCourseId = async () => {
+  //   const response = await Client.get('gradebook/courses')
+  //   setCourseStudents(response.data)
+  // }
 
   useEffect(() => {
-    getCourseById()
-    getStudentByCourseId
-  }, [])
+    getCourseDetails()
+    // getStudentByCourseId()
+  }, [course_id])
 
   return courseDetails ? (
     <div>
@@ -42,7 +36,7 @@ const CourseDetails = () => {
       <div>{courseDetails.credits}</div>
       <div>
         {courseStudents.map((student) => (
-          <Link to={`students/${student_id}`}>
+          <Link to={`students/${student.id}`}>
             {student.name}
             {/* <StudentData key={student.id} name={student.name} /> */}
           </Link>
