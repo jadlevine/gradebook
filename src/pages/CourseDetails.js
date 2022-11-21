@@ -23,7 +23,7 @@ const CourseDetails = () => {
   useEffect(() => {
     getCourseDetails()
     // getStudentByCourseId()
-  }, [course_id])
+  }, [])
 
   return courseDetails ? (
     <div>
