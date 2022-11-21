@@ -4,7 +4,7 @@ import Axios from 'axios'
 // export const BASE_URL = 'https://<heroku-backend>.herokuapp.com/'
 
 // Running BACKEND locally
-export const BASE_URL = 'http://localhost:3001'
+export const BASE_URL = 'http://localhost:3001/gradebook'
 
 const Client = Axios.create({ baseURL: BASE_URL })
 
