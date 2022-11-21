@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom'
 
-const Nav = () => {
+const Nav = (props) => {
+  //props??
+  const handleLogOut = () =>{
+    console.log(`I don't belong here, just holding space for this function... which probably should live up in App.js`)
+  }
+
 
   let user = true
   const authenticatedOptions = (
-      <nav>
+      <nav className='nav-bar'>
         <div className="welcome-container">
           <h3 className="welcome-note">Welcome {user.name}!</h3>          
         </div>
@@ -20,7 +25,7 @@ const Nav = () => {
     )
 
   const publicOptions = (
-    <nav>
+    <nav className='nav-bar'>
       <div className="welcome-container">
         <h3 className="welcome-note">Welcome to GradeBook!</h3>
       </div>

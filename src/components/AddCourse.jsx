@@ -1,8 +1,18 @@
+import { useState } from 'react'
+import Client from '../services/api'
+
 
 const AddCourse = () => {
+const initialFormValues = {
+  name: '',
+  description: '',
+  creditHours: 0
+}
+
+const [addCourseFormValues, setAddCourseFormValues] = useState({})
+
   return (
     <div>
-      <h1>All Courses</h1>
       <div className="courses-container">
         <div>Course List</div>
         <div>Add Course</div>
@@ -11,4 +21,4 @@ const AddCourse = () => {
   )
 }
 
-export default AllCourses
+export default AddCourse
