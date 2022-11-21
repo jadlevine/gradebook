@@ -5,11 +5,12 @@ import Client from '../services/api'
 // import StudentData from '../components/StudentData'
 
 const CourseDetails = () => {
-  let { course_id } = useParams
+  let { course_id } = useParams()
   const [courseDetails, setCourseDetails] = useState(null)
   const [courseStudents, setCourseStudents] = useState([])
 
   const getCourseDetails = async () => {
+    console.log(course_id)
     const response = await Client.get(`courses/${course_id}`)
     setCourseDetails(response.data)
     console.log('hello')
