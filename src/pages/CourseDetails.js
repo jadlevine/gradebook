@@ -7,11 +7,11 @@ import StudentData from './components/StudentData'
 const CourseDetails = () => {
   let { course_id } = useParams
   const [courseDetails, setCourseDetails] = useState(null)
-  const [courseStudents, setCourseStudents] = useStatue([])
+  const [courseStudents, setCourseStudents] = useState([])
 
   const getCourseById = async () => {
     try {
-      const response = await axios.get(`${BASE_URL}/courses/${course_id}`)
+      const response = await axios.get(`/courses/${course_id}`)
       setCourseDetails(response.data)
     } catch (err) {
       console.log(err)
@@ -31,7 +31,7 @@ const CourseDetails = () => {
   return courseDetails ? (
     <div>
       <div>
-        <h1>hello{courseDetails.name}</h1>
+        <h1>{courseDetails.name}</h1>
       </div>
       <div>
         <p>{courseDetails.description}</p>
@@ -40,7 +40,8 @@ const CourseDetails = () => {
       <div>
         {courseStudents.map((student) => (
           <Link to={`students/${student_id}`}>
-            <StudentData key={student.id} name={student.name} />
+            {student.name}
+            {/* <StudentData key={student.id} name={student.name} /> */}
           </Link>
         ))}
       </div>
