@@ -3,17 +3,29 @@ body{
   margin: 0;
 }
 
-.courses-container{
-  display: flex;
-}
 .nav-bar{
   display: flex;
   justify-content: space-between;
   background-color: grey;
-
+  
 }
 .nav-options{
   display: flex;
   justify-content: space-evenly;
   width: 450px;
+}
+
+.course-container{
+  display: flex;
+  justify-content: space-around;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.add-course-form-btn{
+  width: 80px;
+  align-self: center;
 }
