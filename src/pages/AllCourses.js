@@ -6,8 +6,8 @@ const AllCourses = () => {
     <div>
       <h1>All Courses</h1>
       <div className="course-container">
-        <div>Course List</div>
-        <div>Add Course</div>
+        <CourseList />
+        <AddCourse />
       </div>
     </div>
   )
