@@ -18,18 +18,18 @@ function App() {
   return (
     <div>
       <div className="header-container">
+        <Nav />
         {/* <Nav user={user} handleLogOut={handleLogOut} /> */}
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/students" element={<AllStudents />} />
-          <Route path="/students/:student_id" element={<StudentDetails />} />
-          <Route path="/courses" element={<AllCourses />} />
-          <Route path="/courses/:course_id" element={<CourseDetails />} />
-        </Routes>
       </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/students" element={<AllStudents />} />
+        <Route path="/students/:student_id" element={<StudentDetails />} />
+        <Route path="/courses" element={<AllCourses />} />
+        <Route path="/courses/:course_id" element={<CourseDetails />} />
+      </Routes>
     </div>
   )
 }

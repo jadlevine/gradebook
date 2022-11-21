@@ -23,6 +23,9 @@ const CourseDetails = () => {
     setCourseStudents(response.data)
   }
 
+  // JAL - just adding a BASE_URL here so line below doesn't cause problems when compiling
+  const BASE_URL = 'localhost:3001'
+
   useEffect(() => {
     getCourseById()
     getStudentByCourseId
