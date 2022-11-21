@@ -11,4 +11,4 @@ const AddCourse = () => {
   )
 }
 
-export default AllCourses
+export default AddCourse

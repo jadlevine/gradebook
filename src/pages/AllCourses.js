@@ -1,4 +1,5 @@
-import { AddCourse, CourseList } from '../components'
+import AddCourse from '../components/AddCourse'
+import CourseList from '../components/CourseList'
 
 const AllCourses = () => {
   return (

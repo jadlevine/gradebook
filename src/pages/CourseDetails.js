@@ -6,6 +6,9 @@ const CourseDetails = () => {
   let { course_id } = useParams
   const [courseDetails, setCourseDetails] = useState(null)
 
+  // JAL - just adding a BASE_URL here so line below doesn't cause problems when compiling
+  const BASE_URL = 'localhost:3001'
+
   useEffect(() => {
     const getCourseById = async () => {
       try {

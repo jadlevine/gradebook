@@ -7,3 +7,5 @@ const CourseList = ({}) => {
         </div>
     )
 }
+
+export default CourseList
