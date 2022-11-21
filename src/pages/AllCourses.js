@@ -1,47 +1,33 @@
 import AddCourse from '../components/AddCourse'
 import CourseList from '../components/CourseList'
 import { useState, useEffect } from 'react'
+import Client from '../services/api'
 
 const AllCourses = () => {
   const [courses, setCourses] = useState([])
+  const [courseAdded, setCourseAdded] = useState(true)
   // let navigate = useNavigate()
 
   const getAllCourses = async () => {
-    // let courseList = await Client.get('/courses/all')
-    // hardcoded - testing courselist
-    let courseList = [
-      {
-        PK: 1,
-        name: 'Biology 101',
-        description: 'its a biology class',
-        creditHours: 4
-      },
-      {
-        PK: 2,
-        name: 'English 101',
-        description: 'its an english class',
-        creditHours: 3
-      },
-      {
-        PK: 3,
-        name: 'CS 101',
-        description: 'its a CS class',
-        creditHours: 5
-      }
-    ]
-    setCourses(courseList)
+    try {
+      let courseList = await Client.get('/courses')
+      setCourses(courseList.data)
+      setCourseAdded(false)
+    } catch (error) {
+      throw error
+    }
   }
 
   useEffect(() => {
     getAllCourses()
-  }, [])
+  }, [courseAdded])
 
   return (
     <div>
       <h1>All Courses</h1>
       <div className="course-container">
         <CourseList getAllCourses={getAllCourses} courses={courses} />
-        <AddCourse getAllCourses={getAllCourses} />
+        <AddCourse setCourseAdded={setCourseAdded} />
       </div>
     </div>
   )

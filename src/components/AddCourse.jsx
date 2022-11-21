@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Client from '../services/api'
 
 
-const AddCourse = ({getAllCourses}) => {
+const AddCourse = ({setCourseAdded}) => {
 const initialFormValues = {
   name: '',
   description: '',
@@ -14,12 +14,11 @@ const [addCourseFormValues, setAddCourseFormValues] = useState(initialFormValues
 const handleSubmit = async (e) => {
   e.preventDefault()
     try {
-      // await Client.post('/courses', {
-      //   addCourseFormValues
-      // })
-      console.log(`add course requested: ${addCourseFormValues.name}, ${addCourseFormValues.description}, ${addCourseFormValues.creditHours}`)
+      await Client.post('/courses/register',
+        addCourseFormValues
+      )
       setAddCourseFormValues(initialFormValues)
-      getAllCourses()
+      setCourseAdded(true)
     } catch (error) {
       throw error
     }
