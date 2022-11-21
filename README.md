@@ -4,9 +4,9 @@ A grade keeping app for teachers and administrators to manage their courses
 
 ## Contributors
 
-Aekangi Patel [Github]() | [LinkedIn]() <br />
-Philip Basnight [Github]() | [LinkedIn]() <br />
-Erwin Ortiz [Github]() | [LinkedIn]() <br />
+Aekangi Patel [Github](https://github.com/Aekangi) | [LinkedIn](https://www.linkedin.com/in/aekangipatel/) <br />
+Philip Basnight [Github](https://github.com/phizbiz) | [LinkedIn](https://www.linkedin.com/in/philip-basnight/) <br />
+Erwin Ortiz [Github](https://github.com/eortiz65) | [LinkedIn](https://www.linkedin.com/in/erwin-e-ortiz/) <br />
 Josh Levine [Github](https://github.com/jadlevine) | [LinkedIn](https://www.linkedin.com/in/joshua-adam-levine/) <br />
 
 ## Date: 11/22/2022
