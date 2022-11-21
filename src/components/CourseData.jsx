@@ -1,3 +1,4 @@
+import StudentData from './components/StudentData'
 
 
 const CourseData = ({name, description, credits}) => {
@@ -10,3 +11,5 @@ const CourseData = ({name, description, credits}) => {
         </div>
     )
 }
+
+export default CourseData
