@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <div className="header-container">
-        <Nav user={user} handleLogOut={handleLogOut} />
+        {/* <Nav user={user} handleLogOut={handleLogOut} /> */}
 
         <Routes>
           <Route path="/" element={<Home />} />
