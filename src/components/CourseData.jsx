@@ -1,5 +1,3 @@
-import StudentData from './components/StudentData'
-
 
 const CourseData = ({name, description, credits}) => {
 
