@@ -10,10 +10,8 @@ const CourseDetails = () => {
   const [courseStudents, setCourseStudents] = useState([])
 
   const getCourseDetails = async () => {
-    console.log(course_id)
     const response = await Client.get(`courses/${course_id}`)
     setCourseDetails(response.data)
-    console.log('hello')
   }
 
   // const getStudentByCourseId = async () => {
@@ -34,7 +32,9 @@ const CourseDetails = () => {
       <div>
         <p>{courseDetails.description}</p>
       </div>
-      <div>{courseDetails.credits}</div>
+      <div>
+        <h4>{courseDetails.creditHours}</h4>
+      </div>
       <div>
         {courseStudents.map((student) => (
           <Link to={`students/${student.id}`}>
