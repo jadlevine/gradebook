@@ -14,6 +14,15 @@ const CourseDetails = () => {
     setCourseDetails(response.data)
   }
 
+  const deleteCourse = async (id) => {
+    try {
+      const response = await Client.delete(`/courses/${id}`)
+      navigate(`/courses`)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
     getCourseDetails()
   }, [])
@@ -30,6 +39,10 @@ const CourseDetails = () => {
         </div>
         <div className="course-course-list">
           <h3>Student List</h3>
+          <div className="student-list-table-item table-header">
+            <div>Student Name</div>
+            <div>GPA</div>
+          </div>
           {courseDetails.Students.map((student) => (
             <div key={student.id} className="student-list-table-item">
               <div
@@ -43,6 +56,12 @@ const CourseDetails = () => {
           ))}
         </div>
       </div>
+      <button
+        className="delete-btn"
+        onClick={() => deleteCourse(courseDetails.id)}
+      >
+        Delete Course
+      </button>
     </div>
   ) : (
     <div>SORRY NO COURSE BY THAT ID!</div>
