@@ -93,7 +93,8 @@ body{
 .home-text {
  font-family:'Courier New', Courier, monospace;
  font-size: 100px;
-
+ color: white;
+ text-shadow: 0 6px 6px rgb(227,26,35), 0 0 6px rgb(227,26,35);
 }
 
 .student-list-container, .add-student-container form, .course-list-container, .add-course-container form, .student-info, .student-course-list, .course-info, .course-course-list
