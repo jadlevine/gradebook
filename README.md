@@ -15,8 +15,6 @@ Josh Levine [Github](https://github.com/jadlevine) | [LinkedIn](https://www.link
 
 This application will allow you to add, view, update, and delete students, classes, and grades.
 
-To use our app, go to our deployed site on [Heroku]().
-
 You can see our development progress on [Trello](https://trello.com/b/1ZcAdoVy/gradebook).
 
 For more details about the backend of this app, see the repository on [GitHub](https://github.com/jadlevine/gradebook-backend).
@@ -52,7 +50,9 @@ For more details about the backend of this app, see the repository on [GitHub](h
 
 ## Future Updates
 
-- [ Enrolle specific students in specific courses ]
-- [ Update individual grades]
+- [ ] Enroll specific students in specific courses
+- [ ] Update individual grades
+- [ ] Implement Authorization
+- [ ] Deploy on Heroku
 
 ## Credits
