@@ -30,3 +30,15 @@ body{
   width: 80px;
   align-self: center;
 }
+
+.student-grades-table-header, .course-grade-line{
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+.table-header, .course-grade-item{
+  margin: 0 5px;
+  border: 1px solid black;
+}
+.blue-text{
+  color: blue;
+}
