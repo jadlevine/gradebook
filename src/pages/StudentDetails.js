@@ -43,7 +43,6 @@ const StudentDetails = () => {
                 <div className="table-header">Credit Hours</div>
                 <div className="table-header">Score</div>
                 <div className="table-header">Grade</div>
-                <div className="table-header">GPA points*</div>
               </div>
               {studentDetails.Courses.map((course) => (
                 <div key={course.id} className="student-grades-table-line">
@@ -60,12 +59,8 @@ const StudentDetails = () => {
                   <div className="course-grade-item">
                     {course.StudentsCourses.letter}
                   </div>
-                  <div className="course-grade-item">ToDo?</div>
                 </div>
               ))}
-            </div>
-            <div className="table-footer">
-              ToDo? *GPA points calculated as Grade(on 4.0 scale) * Credit Hours
             </div>
           </div>
         </div>

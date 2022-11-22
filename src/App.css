@@ -1,6 +1,14 @@
 body{
   text-align: center;
   margin: 0;
+  background: rgba(0, 0, 0, 0.2)
+  url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80");
+   background-repeat: none;
+   background-size: cover;
+   background-blend-mode: lighten;
+ 
+   object-position: center center;
+  
 }
 
 .nav-bar{
@@ -8,6 +16,11 @@ body{
   justify-content: space-between;
   background-color: grey;
   
+  align-items: center;
+ font-size: 20px;
+  padding: 1em;
+
+  min-height: 2em;
 }
 .nav-options{
   display: flex;
@@ -33,7 +46,7 @@ body{
 
 .student-grades-table-header, .student-grades-table-line{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   background-color: aquamarine;
   border: 1pt solid black;
   width: auto;
@@ -55,3 +68,46 @@ body{
 .blue-text{
   color: blue;
 }
+
+.linky::after {
+  position: absolute;
+  content: " ";
+  background-color: #e09f3e;
+  width: 75%;
+  height: 2px;
+  left: 9px;
+  bottom: -5px;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms ease-in;
+  /* left: 2px; */
+}
+
+.linky:hover::after {
+  transform: scaleX(1);
+}
+
+@import url("https://fonts.google.com/specimen/Zilla+Slab");
+
+.home-text {
+ font-family:'Courier New', Courier, monospace;
+ font-size: xx-large
+
+}
+
+.student-list-container, .add-student-container form, .course-list-container, .add-course-container form, .student-info, .student-course-list, .course-info, .course-course-list
+ {
+  background-color: azure;
+  border: solid 3px black;
+  border-radius: 2px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* .add-student-container form {
+  background-color: azure;
+  border: solid 3px black;
+  border-radius: 2px;
+  padding: 10px 10px 10px 10px;
+} */
+

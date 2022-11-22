@@ -14,9 +14,9 @@ const Nav = (props) => {
           <h3 className="welcome-note">Welcome {user.name}!</h3>          
         </div>
         <div className="nav-options">
-          <Link to="/">Home</Link>
-          <Link to="/students">Students</Link>
-          <Link to="/courses">Courses</Link>
+          <Link to="/" className="linky">Home</Link>
+          <Link to="/students" className="linky">Students</Link>
+          <Link to="/courses" className="linky">Courses</Link>
           <Link onClick={handleLogOut} to="/">
           Sign Out
           </Link>
@@ -30,8 +30,8 @@ const Nav = (props) => {
         <h3 className="welcome-note">Welcome to GradeBook!</h3>
       </div>
       <div className="nav-options">
-        <Link to="/register">Register</Link>
-        <Link to="/signin">Sign In</Link>
+        <Link to="/register" className="linky">Register</Link>
+        <Link to="/signin" className="linky">Sign In</Link>
       </div>
     </nav>
   )
