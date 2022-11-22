@@ -53,7 +53,7 @@ body{
 }
 .student-list-table-item{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   background-color: aquamarine;
   border: 1pt solid black;
   width: auto;
@@ -104,9 +104,13 @@ body{
   padding: 10px 10px 10px 10px;
 }
 
+
+.delete-btn{
+margin: 50px;
+font-size:larger;
+}
 .home-buttons {
   border-radius: 8px;
   padding: 10px 30px 10px 30px;
   margin: 20px;
 }
-

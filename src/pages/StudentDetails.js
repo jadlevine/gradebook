@@ -13,6 +13,15 @@ const StudentDetails = () => {
     setStudentDetails(student.data)
   }
 
+  const deleteStudent = async (id) => {
+    try {
+      const response = await Client.delete(`/students/${id}`)
+      navigate(`/students`)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   const handleCourseClick = (courseId) => {
     navigate(`/courses/${courseId}`)
   }
@@ -61,6 +70,12 @@ const StudentDetails = () => {
             </div>
           </div>
         </div>
+        <button
+          className="delete-btn"
+          onClick={() => deleteStudent(studentDetails.id)}
+        >
+          Delete Student
+        </button>
       </div>
     )
   }
