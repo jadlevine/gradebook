@@ -8,14 +8,10 @@ const StudentDetails = () => {
   let navigate = useNavigate()
   let { student_id } = useParams()
   const [studentDetails, setStudentDetails] = useState()
-  // const [studentCourses, setStudentCourses] = useState([])
 
   const getStudentDetails = async () => {
     const student = await Client.get(`students/${student_id}`)
     setStudentDetails(student.data)
-    // const courses = await Client.get(`studentscourses/courses/${student_id}`)
-    // console.log(courses)
-    // setStudentCourses(courses)
   }
 
   const handleCourseClick = (courseId) => {
@@ -27,7 +23,6 @@ const StudentDetails = () => {
   }, [])
 
   console.log(studentDetails)
-  // console.log(studentCourses)
 
   if (studentDetails) {
     return (
