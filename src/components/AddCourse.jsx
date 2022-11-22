@@ -26,9 +26,6 @@ const handleSubmit = async (e) => {
 
 const handleChange = (e) => {
   if(e.target.name === "creditHours") {
-    console.log('hello')
-    
-    //this is not working yet
     const result = e.target.value.replace(/\D/g,'')
     setAddCourseFormValues({
       ...addCourseFormValues,
@@ -59,7 +56,6 @@ const handleChange = (e) => {
       <textarea
           className="add-course-input"
           onChange={handleChange}
-          // type="textarea"
           value={addCourseFormValues.description}
           placeholder="Course Description"
           id="add-course-input-description"
