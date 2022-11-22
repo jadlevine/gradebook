@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Client from '../services/api'
 
-
 const AddStudent = ({setStudentAdded}) => {
 const initialFormValues = {
   name: '',
@@ -26,9 +25,6 @@ const handleSubmit = async (e) => {
 
 const handleChange = (e) => {
   if(e.target.name === "creditHours") {
-    console.log('hello')
-    
-    //this is not working yet
     const result = e.target.value.replace(/\D/g,'')
     setAddStudentFormValues({
       ...addStudentFormValues,
@@ -59,7 +55,6 @@ const handleChange = (e) => {
       <textarea
           className="add-student-input"
           onChange={handleChange}
-          // type="textarea"
           value={addStudentFormValues.email}
           placeholder="Student Email"
           id="add-student-input-email"
