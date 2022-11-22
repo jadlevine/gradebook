@@ -2,46 +2,48 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import Client from '../services/api'
-// import StudentData from '../components/StudentData'
+import { useNavigate } from 'react-router-dom'
 
 const CourseDetails = () => {
+  let navigate = useNavigate()
   let { course_id } = useParams()
-  const [courseDetails, setCourseDetails] = useState(null)
-  const [courseStudents, setCourseStudents] = useState([])
+  const [courseDetails, setCourseDetails] = useState()
 
   const getCourseDetails = async () => {
     const response = await Client.get(`courses/${course_id}`)
     setCourseDetails(response.data)
   }
 
-  // const getStudentByCourseId = async () => {
-  //   const response = await Client.get('gradebook/courses')
-  //   setCourseStudents(response.data)
-  // }
-
   useEffect(() => {
     getCourseDetails()
-    // getStudentByCourseId()
   }, [])
+
+  console.log(courseDetails)
 
   return courseDetails ? (
     <div>
-      <div>
-        <h1>{courseDetails.name}</h1>
-      </div>
-      <div>
-        <p>{courseDetails.description}</p>
-      </div>
-      <div>
-        <h4>{courseDetails.creditHours}</h4>
-      </div>
-      <div>
-        {courseStudents.map((student) => (
-          <Link to={`students/${student.id}`}>
-            {student.name}
-            {/* <StudentData key={student.id} name={student.name} /> */}
-          </Link>
-        ))}
+      <h1>{courseDetails.name}</h1>
+      <div className="course-container">
+        <div className="course-info">
+          <h3>Course Information</h3>
+          <p>Name: {courseDetails.name}</p>
+          <p>Description: {courseDetails.description}</p>
+          <p>Credit Hours: {courseDetails.creditHours}</p>
+        </div>
+        <div className="course-course-list">
+          <h3>Student List</h3>
+          {courseDetails.Students.map((student) => (
+            <div key={student.id} className="student-list-table-item">
+              <div
+                className="student-name blue-text"
+                onClick={() => navigate(`/students/${student.id}`)}
+              >
+                {student.name}
+              </div>
+              <div className="student-gpa">{student.gpa}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   ) : (

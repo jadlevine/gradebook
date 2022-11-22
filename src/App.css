@@ -38,6 +38,13 @@ body{
   border: 1pt solid black;
   width: auto;
 }
+.student-list-table-item{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: aquamarine;
+  border: 1pt solid black;
+  width: auto;
+}
 
 .table-header, .course-grade-item{
   padding: 4px 0;
