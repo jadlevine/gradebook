@@ -6,7 +6,6 @@ import Client from '../services/api'
 const AllCourses = () => {
   const [courses, setCourses] = useState([])
   const [courseAdded, setCourseAdded] = useState(true)
-  // let navigate = useNavigate()
 
   const getAllCourses = async () => {
     try {

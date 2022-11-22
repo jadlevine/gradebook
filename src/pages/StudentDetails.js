@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
 import Client from '../services/api'
 import { useNavigate } from 'react-router-dom'
 
@@ -21,8 +20,6 @@ const StudentDetails = () => {
   useEffect(() => {
     getStudentDetails()
   }, [])
-
-  console.log(studentDetails)
 
   if (studentDetails) {
     return (
