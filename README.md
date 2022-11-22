@@ -1,6 +1,6 @@
 # GradeBook (frontend)
 
-A grade keeping app for teachers and administrators to manage their courses
+A grade keeping app for teachers and administrators to manage their courses and students.
 
 ## Contributors
 
@@ -15,16 +15,15 @@ Josh Levine [Github](https://github.com/jadlevine) | [LinkedIn](https://www.link
 
 This application will allow you to add, view, update, and delete students, classes, and grades.
 
-You can see our development progress on [Trello](https://trello.com/b/1ZcAdoVy/gradebook).
+You can see our project progress on [Trello](https://trello.com/b/1ZcAdoVy/gradebook).
 
 For more details about the backend of this app, see the repository on [GitHub](https://github.com/jadlevine/gradebook-backend).
 
 ## Screenshots of App
 
-![Register/Login]() </br>
-![User Home]() </br>
-![Course Details]() </br>
-![Student Details]() </br>
+![Home](src/assets/home.png) </br>
+![All Students](src/assets/Allstudents.png) </br>
+![Student Details](src/assets/studentDetail.png) </br>
 
 ## Getting Started
 
@@ -35,18 +34,12 @@ For more details about the backend of this app, see the repository on [GitHub](h
 
 ## Technologies Used
 
-- Frontend Development
-  - HTML
-  - CSS
-  - JS
-  - React
-  - Node JS
-- Backend Development
-  - Postgresql
-  - Sequelize
-  - Express
-- Deployment
-  - Heroku
+- JavaScript
+- React.js
+- Sequelize
+- PostgreSQL
+- Node.js
+- CSS
 
 ## Future Updates
 
@@ -54,5 +47,3 @@ For more details about the backend of this app, see the repository on [GitHub](h
 - [ ] Update individual grades
 - [ ] Implement Authorization
 - [ ] Deploy on Heroku
-
-## Credits
