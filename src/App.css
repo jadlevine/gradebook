@@ -15,7 +15,8 @@ body{
   width: 450px;
 }
 
-.course-container{
+.course-container,
+.student-container{
   display: flex;
   justify-content: space-around;
 }
