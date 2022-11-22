@@ -32,7 +32,7 @@ const StudentDetails = () => {
   if (studentDetails) {
     return (
       <div>
-        <h1>Student Details</h1>
+        <h1>{studentDetails.name}</h1>
         <div className="student-container">
           <div className="student-info">
             <h3>Student Information</h3>
@@ -42,31 +42,33 @@ const StudentDetails = () => {
           </div>
           <div className="student-course-list">
             <h3>Grades</h3>
-            <div className="student-grades-table-header">
-              <div className="table-header">Course</div>
-              <div className="table-header">Credit Hours</div>
-              <div className="table-header">Score</div>
-              <div className="table-header">Grade</div>
-              <div className="table-header">GPA points*</div>
-            </div>
-            {studentDetails.Courses.map((course) => (
-              <div key={course.id} className="course-grade-line">
-                <p
-                  className="course-grade-item blue-text"
-                  onClick={() => navigate(`/courses/${course.id}`)}
-                >
-                  {course.name}
-                </p>
-                <p className="course-grade-item">{course.creditHours}</p>
-                <p className="course-grade-item">
-                  {course.StudentsCourses.score}
-                </p>
-                <p className="course-grade-item">
-                  {course.StudentsCourses.letter}
-                </p>
-                <p className="course-grade-item">ToDo?</p>
+            <div className="student-grades">
+              <div className="student-grades-table-header">
+                <div className="table-header">Course</div>
+                <div className="table-header">Credit Hours</div>
+                <div className="table-header">Score</div>
+                <div className="table-header">Grade</div>
+                <div className="table-header">GPA points*</div>
               </div>
-            ))}
+              {studentDetails.Courses.map((course) => (
+                <div key={course.id} className="student-grades-table-line">
+                  <div
+                    className="course-grade-item blue-text"
+                    onClick={() => navigate(`/courses/${course.id}`)}
+                  >
+                    {course.name}
+                  </div>
+                  <div className="course-grade-item">{course.creditHours}</div>
+                  <div className="course-grade-item">
+                    {course.StudentsCourses.score}
+                  </div>
+                  <div className="course-grade-item">
+                    {course.StudentsCourses.letter}
+                  </div>
+                  <div className="course-grade-item">ToDo?</div>
+                </div>
+              ))}
+            </div>
             <div className="table-footer">
               ToDo? *GPA points calculated as Grade(on 4.0 scale) * Credit Hours
             </div>

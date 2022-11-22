@@ -31,13 +31,19 @@ body{
   align-self: center;
 }
 
-.student-grades-table-header, .course-grade-line{
-  display: flex;
-  /* justify-content: space-evenly; */
+.student-grades-table-header, .student-grades-table-line{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: aquamarine;
+  border: 1pt solid black;
+  width: auto;
 }
+
 .table-header, .course-grade-item{
-  margin: 0 5px;
-  border: 1px solid black;
+  padding: 4px 0;
+}
+.table-header{
+  font-weight: bold;
 }
 .blue-text{
   color: blue;
